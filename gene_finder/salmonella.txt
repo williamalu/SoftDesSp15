@@ -1,0 +1,35 @@
+I BLASTed 5 different amino acid sequences:
+
+Sequence: MGIFASAGCGKTMLMHMLIEQTEADVFVIGLIGERGREVTEFVDMLRASHKKEKCVLVFATSDFPSVDRCNAAQLATTVAEYFRDQGKRVVLFIDSMTRYARALRDVALASGERPARRGYPASVFDNLPRLLERPGATSEGSITAFYTVLLESEEEADPMADEIRSILDGHLYLSRKLAGQGHYPAIDVLKSVSRVFGQVTTPTHAEQASAVRKLMTRLEELQLFIDLGEYRPGENIDNDRAMQMRDSLKAWLCQPVAQYSSFDDTLSGMNAFADQN
+
+Best Matches: Surface Presentation of Antigens [Salmonella Enterica]
+ATP Synthase SpaL [Salmonella Enterica]
+ATP Synthase SpaL [Salmonella enterica subsp. enterica serovar Enteritidis str. 642044 8-1]
+Flagellum specific ATP Synthase [Salmonella Enterica]
+Secretory apparatus ATP Synthase (associated with virulence) [Salmonella Enterica]
+
+MGDVSAVSSSGNILLPQQDEVGGLSEALKKAVEKHKTEYSGDKKDRDYGDAFVMHKETALPLLLAAWRHGAPAKSEHHNGNVSGLHHNGKSELRIAEKLLKVTAEKSVGLISAEAKVDKSAALLSSKNRPLESVSGKKLSADLKAVESVSEVTDNATGISDDNIKALPGDNKAIAGEGVRKEGAPLARDVAPARMAAANTGKPEDKDHKKVKDVSQLPLQPTTIADLSQLTGGDEKMPLAAQSKPMMTIFPTADGVKGEDSSLTYRFQRWGNDYSVNIQARQAGEFSLIPSNTQVEHRLHDQWQNGNPQRWHLTRDDQQNPQQQQHRQQSGEEDDA
+
+Best Match:
+Antigen Presentation Protein SpaN [Salmonella Enterica]
+
+MFYALYFEIHHLVASAALGFARVAPIFFFLPFLNSGVLSGAPRNAIIILVALGVWPHALNEAPPFLSVAMIPLVLQEAAVGVMLGCLLSWPFWVMHALGCIIDNQRGATLSSSIDPANGIDTSEMANFLNMFAAVVYLQNGGLVTMVDVLNKSYQLCDPMNECTPSLPPLLTFINQVAQNALVLASPVVLVLLLSEVFLGLLSRFAPQMNAFAISLTVKSGIAVLIMLLYFSPVLPDNVLRLSFQATGLSSWFYERGATHVLE
+
+Best Match:
+Type III Secretion System Protein SpaR [Salmonella Enterica]
+
+MSLRVRQIDRREWLLAQTATECQRHGREATLEYPTRQGMWVRLSDAEKRWSAWIKPGDWLEHVSPALAGAAVSAGAEHLVVPWLAATERPFELPVPHLSCRRLCVENPVPGSALPEGKLLHIMSDRGGLWFEHLPELPAVGGGRPKMLRWPLRFVIGSSDTQRSLLGRIGIGDVLLIRTSRAEVYCYAKKLGHFNRVEGGIIVETLDIQHIEEENNTTETAETLPGLNQLPVKLEFVLYRKNVTLAELEAMGQQQLLSLPTNAELNVEIMANGVLLGNGELVQMNDTLGVEIHEWLSESGNGE
+
+Best Match:
+Type III Secretion System Protein SpaO [Salmonella Enterica]
+
+MSSNKTEKPTKKRLEDSAKKGQSFKSKDLIIACLTLGGIAYLVSYGSFNEFMGIIKIIIADNFDQSMADYSLAVFGIGLKYLIPFMLLCLVCSALPALLQAGFVLATEALKPNLSALNPVEGAKKLFSMRTVKDTVKTLLYLSSFVVAAIICWKKYKVEIFSQLNGNIVGIAVIWRELLLALVLTCLACALIVLLLDAIAEYFLTMKDMKMDKEEVKREMKEQEGNPEVKSKRREVHMEILSEQVKSDIENSRLIVANPTHITIGIYFKPELMPIPMISVYETNQRALAVRAYAEKVGVPVIVDIKLARSLFKTHRRYDLVSLEEIDEVLRLLVWLEEVENAGKDVIQPQENEVRH
+
+Best Match:
+Type III Secretion System Protein SpaS [Salmonella Enterica]
+
+---
+
+These sequences all perfectly matched proteins from bacteria in the salmonella genus (more specifically, salmonella enterica).  However, it's the non-100% matches that are the most interesting. The first AA sequence also partially matches ATP synthase proteins from providencia alcalifaciens, the chromobacterium genus (and various species), and the escherichia genus (mostly e. coli, but also other various species).  The second AA sequence only seems to match with salmonella enterica specific proteins. The third AA sequence partially matches up with SSPs from providencia alcalifaciens, pseudogulbenkiania ferrooxidans, pseudomonas, the chromobacterium genus (and various species), the escherichia genus (mostly e. coli), and more.  The fourth AA sequence matches SSPs from providencia alcalifaciens, pseudogulbenkiania ferrooxidans, the pandoraea genus (and various species), the chromobacterium genus (and various species), and the escherichia genus (mostly e. coli, but also other various species).  The fifth AA sequence matches matches similarly to the fourth sequence, with the addition of the Candidatus Hamiltonella genus and the Sodalis genus.
+
+The matches to all the other genuses of bacteria indicate that the proteins in Salmonella are closely related to those bacteria. A possible explanation for this would be that all these genuses of bacteria shared a common ancestor relatively recently. However, another possible explanation is that of horizontal gene transfer, where a bacterium like Shigella flexneri injects host cells with ipa proteins using the type III secretion system. The proteins that I blasted did match with T3SS proteins, which potentially indicates this type of horizontal gene transfer.
