@@ -1,4 +1,4 @@
-""" TODO: Put your header comment here """
+""" Creates png images of "art" with recursive functions """
 
 import random
 import math
@@ -25,14 +25,11 @@ def build_random_function(min_depth, max_depth):
 def make_function(depth):
     """ Recursively generates a function for build_random_function"""
     if depth == 0:
-        # base_case_options = ["x", "y"]
-        # return base_case_options[random.randint(0,1)]
         base_case_options = [["x"], ["y"]]
         return random.choice(base_case_options)
     else:
         modifiers = ["prod", "avg", "cos_pi", "sin_pi", "tan_pi", "asin_pi"]
         rand_modifier = random.choice(modifiers)
-        #print rand_modifier
         if "prod" in rand_modifier:
             return ["prod", make_function(depth-1), make_function(depth-1)]
         if "avg" in rand_modifier:
