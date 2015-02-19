@@ -30,7 +30,7 @@ def make_function(depth):
         base_case_options = [["x"], ["y"]]
         return random.choice(base_case_options)
     else:
-        modifiers = ["prod", "avg", "cos_pi", "sin_pi"]
+        modifiers = ["prod", "avg", "cos_pi", "sin_pi", "tan_pi", "asin_pi"]
         rand_modifier = random.choice(modifiers)
         #print rand_modifier
         if "prod" in rand_modifier:
@@ -41,6 +41,10 @@ def make_function(depth):
             return ["cos_pi", make_function(depth-1)]
         if "sin_pi" in rand_modifier:
             return ["sin_pi", make_function(depth-1)]
+        if "tan_pi" in rand_modifier:
+            return ["tan_pi", make_function(depth-1)]
+        if "asin_pi" in rand_modifier:
+            return ["asin_pi", make_function(depth-1)]
 
 def evaluate_random_function(function, x, y):
     """ Evaluate the random function f with inputs x,y
@@ -63,6 +67,10 @@ def evaluate_random_function(function, x, y):
         return math.cos(math.pi * evaluate_random_function(function[1], x, y))
     elif "sin_pi" in function[0]:
         return math.sin(math.pi * evaluate_random_function(function[1], x, y))
+    elif "tan_pi" in function[0]:
+        return math.tan(math.pi * evaluate_random_function(function[1], x, y))
+    elif "asin_pi" in function[0]:
+        return math.asin(math.pi * evaluate_random_function(function[1], x, y))
 
 def remap_interval(val, input_interval_start, input_interval_end, output_interval_start, output_interval_end):
     """ Given an input value in the interval [input_interval_start,
