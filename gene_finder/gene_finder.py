@@ -201,7 +201,6 @@ def coding_strand_to_AA(dna):
         >>> coding_strand_to_AA("ATGCCCGCTTT")
         'MPA'
     """
-<<<<<<< HEAD
     #no doctest added - the second doctest already covers the case where the dna is not in triplets
     index = 0
     aa_string = ''
@@ -213,14 +212,7 @@ def coding_strand_to_AA(dna):
 def gene_finder(dna):
     """ Returns the amino acid sequences coded by all genes that have an ORF
         larger than the specified threshold.
-=======
-    # TODO: implement this
-    pass
-
-def gene_finder(dna):
-    """ Returns the amino acid sequences that are likely coded by the specified dna
->>>>>>> f995e7995873fb13efc0faeca7688191045d189d
-        
+                
         dna: a DNA sequence
         returns: a list of all amino acid sequences coded by the sequence dna.
     """
