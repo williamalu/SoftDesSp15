@@ -41,6 +41,7 @@ def get_complement(nucleotide):
         return 'A'
     elif nucleotide is 'G':
         return 'C'
+    # read http://stackoverflow.com/questions/2988017/string-comparison-in-python-is-vs. Know that is and == are not always the same, and that in some cases the two comparisons will yield different answers. 
 
 def get_reverse_complement(dna):
     """ Computes the reverse complementary sequence of DNA for the specfied DNA
@@ -59,6 +60,7 @@ def get_reverse_complement(dna):
         res.append(get_complement(c))
     delimiter = ''
     res = delimiter.join(res)
+    #you can take an empty string and just do res += get_complement(c). Converting between string and list is something you can skip.
     return res[::-1] #extended slice allows for third argument, which tells the slice the "step" to slice in
 
 def rest_of_ORF(dna):
@@ -84,7 +86,7 @@ def rest_of_ORF(dna):
     res = []
     for i in range(0, len(dna), 3):
         if dna[i:(i+3)] in stopcodons:
-            return dna[0:i]
+            return dna[0:i] #the 0 is unnessecary
     return dna
 
 
@@ -104,13 +106,14 @@ def find_all_ORFs_oneframe(dna):
     """
     #added a doctest to see what happens when a dna sequence has no start codon in any frame
     orig = dna[:]
+#this orig stuff doesn't look like it's being used
     res = []
     startcodon = 'ATG'
     stopcodons = ['TAG','TAA','TGA']
 
     index = 0
     while index < (len(dna) - 2):
-        if dna[index:(index+3)] in startcodon:
+        if dna[index:(index+3)] in startcodon: #I would use == startcodon. 
             dnachunk = rest_of_ORF(dna[index:])
             res.append(dnachunk)
             index += len(dnachunk)
@@ -204,6 +207,7 @@ def coding_strand_to_AA(dna):
     #no doctest added - the second doctest already covers the case where the dna is not in triplets
     index = 0
     aa_string = ''
+    #should use a for loop here instead.
     while index < (len(dna) - 2):
         aa_string += aa_table[dna[index:index+3]]
         index += 3
