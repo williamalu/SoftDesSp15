@@ -20,6 +20,8 @@ def build_random_function(min_depth, max_depth):
 
     depth = random.randint(min_depth, max_depth)
     function = make_function(depth)
+    #clever, I guess this technically works! The wording of the assignment was somewhat ambiguous so I'm not going to take points of for this, but the intention was for every 'x' or 'y' in this function to be randomly nested at a depth somewhere between min_depth and max_depth.
+    #currently, in your code, every 'x' or 'y' is nested at the same depth. Can you think of how you would change your code to have that depth be random, between min_depth and max_depth?
     return function
 
 def make_function(depth):
@@ -30,6 +32,7 @@ def make_function(depth):
     else:
         modifiers = ["prod", "avg", "cos_pi", "sin_pi", "tan_pi", "asin_pi"]
         rand_modifier = random.choice(modifiers)
+        # try to avoid using in when comparing strings for equality, as it obscures what you're doing and the intention is not clear. Instead, just do if rand_modifier == "prod", which is more readable.
         if "prod" in rand_modifier:
             return ["prod", make_function(depth-1), make_function(depth-1)]
         if "avg" in rand_modifier:
@@ -68,6 +71,7 @@ def evaluate_random_function(function, x, y):
         return math.tan(math.pi * evaluate_random_function(function[1], x, y))
     elif "asin_pi" in function[0]:
         return math.asin(math.pi * evaluate_random_function(function[1], x, y))
+#nice and compact, cool! :)
 
 def remap_interval(val, input_interval_start, input_interval_end, output_interval_start, output_interval_end):
     """ Given an input value in the interval [input_interval_start,
@@ -95,7 +99,7 @@ def remap_interval(val, input_interval_start, input_interval_end, output_interva
     input_range = input_interval_end - float(input_interval_start) #turns input_interval_start into a float to prevent integer division problems
     output_range = output_interval_end - output_interval_start
     return (((val - input_interval_start) / input_range) * output_range) + output_interval_start
-
+    #nice, good job choosing variable names too!
 
 def color_map(val):
     """ Maps input value between -1 and 1 to an integer 0-255, suitable for
