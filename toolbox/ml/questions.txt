@@ -1,0 +1,18 @@
+1. What is the general trend in the curve?
+
+The general trend in the curve is upward, as expected - the more data is used for training, the more accurate the model is.
+
+2. Are there parts of the curve that appear to be noisier than others?  Why?
+
+Some areas of the curve are noisier than the others because the test does not return the same result every single time. In the noisy areas of the curve,
+there are usually a couple of test scores that are outliers - either significantly more or less accurate than average. The documentation on LogisticRegression in
+scikit-learn also notes that it "uses a random number generator to select features when fitting the model. It is thus not uncommon, to have slightly different 
+results for the same input data."
+
+3. How many trials do you need to get a smooth curve?
+
+50 trials usually returns a smooth curve.
+
+4. Try different values for C (by changing LogisticRegression(C=10**-10)).  What happens?  If you want to know why this happens, see this Wikipedia page as well as the documentation for LogisticRegression in scikit-learn.
+
+At C values of 10**-1, the curve rises extremely quickly but plateaus.  At C values of 10**-100, the curve is noisy and accuracy on the test set is extremely low.
